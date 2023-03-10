@@ -1,3 +1,3 @@
 package state
 
-class State
+abstract class State

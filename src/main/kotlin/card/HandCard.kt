@@ -1,6 +1,8 @@
 package card
 
 class HandCard(val cards: MutableList<Card>) {
-    val size = cards.size
+    val size
+        get() = cards.size
+
     fun add(card: Card) = cards.add(card)
 }
