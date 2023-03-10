@@ -1,5 +1,7 @@
 package domain
 
+import domain.state.Blackjack
+
 class HandCard(cards: List<Card>) {
     private var _cards = cards.toMutableList()
     private val cards
@@ -12,8 +14,12 @@ class HandCard(cards: List<Card>) {
 
     fun getScore(): Int {
         var score = cards.sumOf { it.cardNumber.score }
-        if (cards.any { it.cardNumber == CardNumber.ACE } && score + 10 <= 21)
-            return score + 10
+        if (cards.any { it.cardNumber == CardNumber.ACE } && score + ACE_SOFT_SCORE <= Blackjack.SCORE)
+            return score + ACE_SOFT_SCORE
         return score
+    }
+
+    companion object {
+        private const val ACE_SOFT_SCORE = 10
     }
 }
