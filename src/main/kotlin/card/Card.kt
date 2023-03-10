@@ -1,3 +1,3 @@
 package card
 
-class Card(cardNumber: CardNumber)
+class Card(val cardNumber: CardNumber)

@@ -8,7 +8,14 @@ import org.junit.jupiter.api.Test
 
 class EntryGameTest {
     @Test
-    fun `2장을 받으면 hit 상태가 된다`() {
+    fun `처음 받은 2장의 합이 21이면 blackjack 상태가 된다`() {
+        val card = HandCard(mutableListOf(Card(CardNumber.ACE)))
+        val actual = EntryGame(card).draw(Card(CardNumber.KING))
+        assertThat(actual).isInstanceOf(Blackjack(card)::class.java)
+    }
+
+    @Test
+    fun `2장을 받으면 blackjack 이 아닌 경우 hit 상태가 된다`() {
         val card = HandCard(mutableListOf(Card(CardNumber.FIVE)))
         val actual = EntryGame(card).draw(Card(CardNumber.EIGHT))
         assertThat(actual).isInstanceOf(Hit(card)::class.java)

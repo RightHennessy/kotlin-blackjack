@@ -1,6 +1,6 @@
 package card
 
-enum class CardNumber(val number: Int) {
+enum class CardNumber(val score: Int) {
     ACE(1),
     ONE(1),
     TWO(2),
