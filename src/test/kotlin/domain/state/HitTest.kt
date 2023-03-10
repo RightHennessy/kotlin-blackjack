@@ -1,8 +1,8 @@
-package state
+package domain.state
 
-import card.Card
-import card.CardNumber
-import card.HandCard
+import domain.Card
+import domain.CardNumber
+import domain.HandCard
 import org.assertj.core.api.AssertionsForClassTypes.assertThat
 import org.junit.jupiter.api.Test
 

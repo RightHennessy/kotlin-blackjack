@@ -1,5 +1,5 @@
-package state
+package domain.state
 
-import card.HandCard
+import domain.HandCard
 
 class Bust(handCard: HandCard) : EndGame()

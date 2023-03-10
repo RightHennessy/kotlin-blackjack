@@ -1,7 +1,7 @@
-package state
+package domain.state
 
-import card.Card
-import card.HandCard
+import domain.Card
+import domain.HandCard
 
 abstract class OnGame(private val handCard: HandCard) : State {
     override fun draw(card: Card): State {

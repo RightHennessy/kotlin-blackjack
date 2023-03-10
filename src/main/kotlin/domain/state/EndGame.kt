@@ -1,6 +1,6 @@
-package state
+package domain.state
 
-import card.Card
+import domain.Card
 
 abstract class EndGame : State {
 

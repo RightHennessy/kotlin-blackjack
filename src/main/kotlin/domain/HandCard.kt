@@ -1,4 +1,4 @@
-package card
+package domain
 
 class HandCard(private val cards: MutableList<Card>) {
     val size

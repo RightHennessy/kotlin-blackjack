@@ -1,6 +1,6 @@
-package state
+package domain.state
 
-import card.HandCard
+import domain.HandCard
 
 class Hit(handCard: HandCard) : OnGame(handCard) {
 

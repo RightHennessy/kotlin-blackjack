@@ -1,4 +1,4 @@
-package card
+package domain
 
 enum class CardNumber(val score: Int) {
     ACE(1),
