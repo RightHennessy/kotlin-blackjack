@@ -1,10 +1,5 @@
 package state
 
-import card.Card
 import card.HandCard
 
-class Blackjack(val handCard: HandCard) : State {
-    override fun draw(card: Card): State {
-        throw IllegalStateException("더 이상 카드를 뽑지 않습니다")
-    }
-}
+class Blackjack(handCard: HandCard) : EndGame()
