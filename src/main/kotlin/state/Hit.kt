@@ -9,6 +9,9 @@ class Hit(val handCard: HandCard) : State {
         if (handCard.getScore() > 21) {
             return Bust(handCard)
         }
+        if (handCard.getScore() == 21) {
+            return Stay(handCard)
+        }
         return Hit(handCard)
     }
 }

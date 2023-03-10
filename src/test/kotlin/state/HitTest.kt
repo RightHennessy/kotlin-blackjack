@@ -13,4 +13,11 @@ class HitTest {
         val actual = FirstTurn(card).draw(Card(CardNumber.TWO)).draw(Card(CardNumber.TEN))
         assertThat(actual).isInstanceOf(Bust(card)::class.java)
     }
+
+    @Test
+    fun `카드의 합이 21이 되면 stay 상태가 된다`() {
+        val card = HandCard(mutableListOf(Card(CardNumber.KING)))
+        val actual = FirstTurn(card).draw(Card(CardNumber.TWO)).draw(Card(CardNumber.NINE))
+        assertThat(actual).isInstanceOf(Stay(card)::class.java)
+    }
 }
