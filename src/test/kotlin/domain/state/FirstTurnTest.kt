@@ -6,7 +6,7 @@ import domain.HandCard
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class EntryGameTest {
+class FirstTurnTest {
     @Test
     fun `처음 받은 2장의 합이 21이면 blackjack 상태가 된다`() {
         val card = HandCard(mutableListOf(Card(CardNumber.ACE)))
