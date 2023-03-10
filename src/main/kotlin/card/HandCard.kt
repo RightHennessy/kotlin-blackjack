@@ -1,6 +1,6 @@
 package card
 
-class HandCard(val cards: MutableList<Card>) {
+class HandCard(private val cards: MutableList<Card>) {
     val size
         get() = cards.size
 
